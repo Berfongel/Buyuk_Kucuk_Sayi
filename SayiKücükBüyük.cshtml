@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model SayiKücükBüyük
+
+<html>
+<head>
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm())
+        {
+            <table>
+                <tr>
+                    <td style="color:darkblue;font-size:20px;"> Birinci Sayıyı Giriniz : </td>
+                    <td>@Html.EditorFor(sayi1 => sayi1.Number1)    </td>
+                </tr>
+
+                <tr>
+                    <td style="color:darkblue;font-size:20px;">İkinci Sayıyı Giriniz : </td>
+                    <td>@Html.EditorFor(sayi2 => sayi2.Number2)    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="Ekrana Yazdır" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>@ViewBag.FirstMessage</td>
+                    <td>@ViewBag.SecondMessage</td>
+                </tr>
+            </table>
+        }
+    </div>
+</body>
+</html>
